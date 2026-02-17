@@ -2,6 +2,20 @@ let allProducts = [];
 let cart = [];
 const API_BASE = 'https://fakestoreapi.com';
 
+// Load cart from localStorage
+function loadCartFromStorage() {
+    const savedCart = localStorage.getItem('swiftcart_cart');
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+        updateCartUI();
+    }
+}
+
+// Save cart to localStorage
+function saveCartToStorage() {
+    localStorage.setItem('swiftcart_cart', JSON.stringify(cart));
+}
+
 // Show Toast Notification
 function showToast(message, type = 'success') {
     const toast = document.createElement('div');
