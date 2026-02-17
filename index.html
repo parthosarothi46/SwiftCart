@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftCart - Best Collection For You</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-work bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white sticky top-0 z-50 shadow-2xl border-b-2 border-purple-500">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <h1 class="text-3xl md:text-4xl font-bebas tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 hover:scale-110 transition-transform cursor-pointer">
+                        SwiftCart
+                    </h1>
+                </div>
+                
+                <!-- Menu Items - Desktop -->
+                <div class="hidden md:flex space-x-8 flex-1 justify-center">
+                    <a href="#home" class="nav-link text-lg font-medium hover:text-purple-400 transition-all border-b-2 border-transparent hover:border-purple-400 pb-1">Home</a>
+                    <a href="#products" class="nav-link text-lg font-medium hover:text-purple-400 transition-all border-b-2 border-transparent hover:border-purple-400 pb-1">Products</a>
+                    <a href="#about" class="nav-link text-lg font-medium hover:text-purple-400 transition-all border-b-2 border-transparent hover:border-purple-400 pb-1">About</a>
+                    <a href="#contact" class="nav-link text-lg font-medium hover:text-purple-400 transition-all border-b-2 border-transparent hover:border-purple-400 pb-1">Contact</a>
+                </div>
+                
+                <!-- Cart Icon -->
+                <div class="flex items-center space-x-4">
+                    <button id="cartBtn" class="relative cart-btn bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-full transition-all transform hover:scale-110 shadow-lg">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span id="cartCount" class="absolute -top-2 -right-2 bg-pink-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center cart-badge">0</span>
+                    </button>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobileMenuBtn" class="md:hidden text-white text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 space-y-3">
+                <a href="#home" class="block text-lg hover:text-purple-400 transition-colors py-2">Home</a>
+                <a href="#products" class="block text-lg hover:text-purple-400 transition-colors py-2">Products</a>
+                <a href="#about" class="block text-lg hover:text-purple-400 transition-colors py-2">About</a>
+                <a href="#contact" class="block text-lg hover:text-purple-400 transition-colors py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 hero-bg"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-purple-900/80 via-slate-900/70 to-purple-900/80"></div>
+        
+        <div class="relative z-10 text-center text-white px-4 hero-content">
+            <h1 class="text-5xl md:text-7xl font-playfair font-bold mb-6 animate-fadeInUp">
+                Best Collection For You
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 font-light max-w-2xl mx-auto animate-fadeInUp" style="animation-delay: 0.2s;">
+                Discover the latest trends in fashion, electronics, and more. Shop with confidence and style at SwiftCart.
+            </p>
+            <a href="#products" class="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-110 shadow-2xl animate-fadeInUp" style="animation-delay: 0.4s;">
+                Shop Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-playfair font-bold text-center mb-4 text-gray-900">Why Choose Us</h2>
+            <p class="text-center text-gray-600 mb-16 text-lg">We provide the best shopping experience with top-notch services.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl text-center transform hover:scale-105 transition-all shadow-lg hover:shadow-2xl">
+                    <div class="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 feature-icon">
+                        <i class="fas fa-truck text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Fast Delivery</h3>
+                    <p class="text-gray-600">Get your orders delivered to your doorstep quickly and efficiently.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl text-center transform hover:scale-105 transition-all shadow-lg hover:shadow-2xl">
+                    <div class="w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6 feature-icon">
+                        <i class="fas fa-headset text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">24/7 Support</h3>
+                    <p class="text-gray-600">Our support team is available around the clock to assist you.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl text-center transform hover:scale-105 transition-all shadow-lg hover:shadow-2xl">
+                    <div class="w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 feature-icon">
+                        <i class="fas fa-shield-alt text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Secure Payment</h3>
+                    <p class="text-gray-600">Experience safe and secure transactions with our encrypted payment systems.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-2xl text-center transform hover:scale-105 transition-all shadow-lg hover:shadow-2xl">
+                    <div class="w-20 h-20 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6 feature-icon">
+                        <i class="fas fa-undo text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Easy Returns</h3>
+                    <p class="text-gray-600">Not satisfied? Return your products easily within 30 days.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Products Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-100 to-gray-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-playfair font-bold text-center mb-4 text-gray-900">Trending Now</h2>
+            <p class="text-center text-gray-600 mb-16 text-lg">Check out our most popular products</p>
+            
+            <div id="trendingProducts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Trending products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- All Products Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-playfair font-bold text-center mb-4 text-gray-900">Our Products</h2>
+            <p class="text-center text-gray-600 mb-12 text-lg">Browse through our amazing collection</p>
+            
+            <!-- Category Filter Buttons -->
+            <div id="categoryContainer" class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="category-btn active bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg" data-category="all">
+                    All Products
+                </button>
+                <!-- More category buttons will be loaded dynamically -->
+            </div>
+            
+            <!-- Loading Spinner -->
+            <div id="loadingSpinner" class="flex justify-center items-center py-20">
+                <div class="spinner"></div>
+            </div>
+            
+            <!-- Products Grid -->
+            <div id="productsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="contact" class="py-20 bg-gradient-to-r from-purple-900 via-slate-900 to-purple-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold mb-4">Subscribe to Our Newsletter</h2>
+                <p class="text-lg mb-8 text-gray-300">The latest news, articles, and resources, sent to your inbox weekly.</p>
+                
+                <form id="newsletterForm" class="flex flex-col md:flex-row gap-4 justify-center">
+                    <input type="email" id="emailInput" placeholder="Enter your email" required class="flex-1 max-w-md px-6 py-4 rounded-full text-gray-900 focus:outline-none focus:ring-4 focus:ring-purple-400 text-lg">
+                    <button type="submit" class="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 px-10 py-4 rounded-full font-semibold transition-all transform hover:scale-105 shadow-xl text-lg">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-3xl font-bebas mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">SwiftCart</h3>
+                    <p class="text-gray-400">Your one-stop shop for all your fashion and lifestyle needs. Quality products, fast delivery and excellent service.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4 text-purple-400">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-purple-400 transition-colors">Home</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-purple-400 transition-colors">Products</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-purple-400 transition-colors">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-purple-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4 text-purple-400">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">Shipping</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">Returns</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4 text-purple-400">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-purple-600 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all transform hover:scale-110">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-purple-600 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all transform hover:scale-110">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-purple-600 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all transform hover:scale-110">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-purple-600 hover:bg-purple-700 rounded-full flex items-center justify-center transition-all transform hover:scale-110">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 SwiftCart, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-4 modal-overlay">
+        <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto modal-content">
+            <div class="sticky top-0 bg-white z-10 flex justify-between items-center p-6 border-b">
+                <h3 class="text-2xl font-bold text-gray-900">Product Details</h3>
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700 text-3xl font-bold transition-colors">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div id="modalContent" class="p-6">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div id="cartSidebar" class="fixed right-0 top-0 h-full w-full md:w-96 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-50 cart-sidebar">
+        <div class="flex flex-col h-full">
+            <div class="flex justify-between items-center p-6 border-b bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+                <h3 class="text-2xl font-bold">Shopping Cart</h3>
+                <button id="closeCart" class="text-white hover:text-gray-200 text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div id="cartItems" class="flex-1 overflow-y-auto p-6">
+                <!-- Cart items will be loaded here -->
+            </div>
+            
+            <div class="border-t p-6 bg-gray-50">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-xl font-bold text-gray-900">Total:</span>
+                    <span id="cartTotal" class="text-2xl font-bold text-purple-600">$0.00</span>
+                </div>
+                <button class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white py-4 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg">
+                    Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
