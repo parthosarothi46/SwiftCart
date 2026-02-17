@@ -30,6 +30,7 @@ function showToast(message, type = 'success') {
 
 // Initialize App
 document.addEventListener('DOMContentLoaded', () => {
+    loadCartFromStorage();
     loadCategories();
     loadAllProducts();
     loadTrendingProducts();
@@ -80,6 +81,15 @@ function setupEventListeners() {
             productModal.classList.add('hidden');
             productModal.classList.remove('flex');
         }
+    });
+
+    // Newsletter Form
+    const newsletterForm = document.getElementById('newsletterForm');
+    newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('emailInput').value;
+        showToast('Successfully subscribed to newsletter!', 'success');
+        newsletterForm.reset();
     });
 
     // Smooth scroll for navigation links
